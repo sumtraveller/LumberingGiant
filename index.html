@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com.">
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <!--
+
+        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
+        presentation to work.
+
+        This style below contains styles only for demo presentation. Browse it to see how impress.js
+        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
+        you to use them directly in your presentation.
+
+        Be creative, build your own. We don't really want all impress.js presentations to look the same,
+        don't we?
+
+        When creating your own presentation get rid of this file. Start from scratch, it's fun!
+
+    -->
+    <link href="css/impress-demo.css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="impress" class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>can't handle this presentation<b> so you are presented with a simplified version of this presentation.</p>
+        <p>Use <b>Chrome</b> or <b>Safari</b> browser. And that's pretty much my whole point, Alan Huffman.</p>
+    </div>
+
+    <!--
+
+        Here is where interesting thing start to happen.
+
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+
+        Positioning information is passed through data attributes.
+
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+
+        It will not be rotated or scaled.
+
+    -->
+    <div id="" class="step slide" data-x="-1000" data-y="-1500">
+        <p>Once, a long, long time ago...</p>
+        <br>
+        <p><img src="img/microsoft_gray.png"/> ruled the world, like tyrannosaurus rex.</p>
+        <div style="margin-top:150px;"> <img src="img/trex.jpg"> </div>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="-1500">
+        <p>Both giants dominated their nascent worlds, killing the smaller, weaker prey.</p>
+        <img style="float:left; margin-top:100px" src="img/trex-prey.jpg">
+        <span style="float:left; display:inline-block; padding-top:220px; margin-left: 50px;"> <img  src="img/msft-kill.png"></span>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <p>They devoured everything in their path.</p>
+        <div style="margin-top: 100px; margin-left: 30px;">
+            <div style="float:left; margin-top:25px;">
+                <img style="width:90px;" src="img/ibm_lotus.gif">
+                <br>
+                <img style="width:90px;" src="img/linux.jpg">
+                <br>
+                <img style="width:90px;" src="img/macintosh.jpg">
+            </div>
+            <div style="float:left; margin-left: 80px; margin-top:25px; padding-top: 75px;">
+                <img style="width:110px;" src="img/sybase.jpg">
+                <br>
+                <img style="width:110px;" src="img/netscape.jpg">
+            </div>
+            <div style="float:left; margin-top:150px;"><img style="width:200px;" src="img/mosaic.jpg"></div>
+            <div style="float:right; margin-top:-195px; margin-right:-30px;"><img style="height:250px;" src="img/trex-chase.png"></div>
+        </div>
+    </div>
+
+    <div class="step slide" data-x="2000" data-y="-1500">
+        <p>Then everything changed.</p>
+        <img src="img/comet.png">
+    </div>
+
+    <!--
+
+        This is an example of step element being scaled.
+
+        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
+        element will be 4 times larger than the others.
+        From presentation and transitions point of view it means, that it will have to be scaled
+        down (4 times) to make it back to it's correct size.
+
+    -->
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4" >
+        <span class="try">The internet revolution began <img style=width:70px src="img/revolution.png"></span>
+        <div style="margin-top:20px; margin-left: 0px">
+            <img style="margin-left:40px" src="img/aol.png">
+            <img style="margin-left:40px" src="img/yahoo.png">
+            <img style="margin-left:40px" src="img/google.png">
+        </div>
+    </div>
+
+    <div id="its"  class="step" data-x="850" data-y="3000" data-rotate="180" data-scale="5">
+        <p>The PC world was turned upside down.</strong> <br/>
+        <p style="margin-top: 50px">
+            <img src="img/applet.png">
+            <img src="img/flash.png">
+            <img src="img/html.png">
+        </p>
+        <p style="margin-top: 50px">New & old technologies rose, evolved.</p>
+    </div>
+
+    <div id="the-future" class="step" data-x="850" data-y="3000" data-rotate="180" data-z="-1500" data-scale="5">
+        <p>The battle for the future ensued:<p>
+        <p style=margin-top:50px>
+            <img style="height:100px" src="img/silverlight.jpg">
+            <img style="width:100px;" src="img/flex.png" >
+            <img style="height:100px"src="img/xhtml.jpg">
+        </p>
+        <p style="margin-top:50px">
+            People thought the web was broken.
+        </p>
+        <p style="margin-top:40px; font-size:1.4em">
+            They believed it had to be reborn.
+        </p>
+    </div>
+
+    <div id=webgrowth class="step" data-x="850" data-y="3000" data-rotate="180" data-z="-3000" data-scale="5">
+        <div style="margin-top: 100px">While people pondered how to rewrite the web, <b>millions</b> of people created <br><span style="font-weight: bold; font-size: 1.1em">billions and billions</span><br> of new pages.</div>
+        <img src="img/internet.png">
+    </div>
+
+    <div id="no-rewrite" class="step" data-x="800" data-y="3000" data-z="-3000" data-rotate="180" data-scale="1">
+        <p style="font-size:0.8em">A precious few embraced what had been created. <p>
+        <p style="font-size:0.8em">They figured out how to fix it, <span style="font-size:1.2em">evolve it</span>, <br><span style="font-size:1.3em">make it better</span>.</p>
+        <img style="margin-top: 50px" src="img/html5willWin.jpg">
+        <p style="margin-top: 50px; font-size:0.8em">A way that did not require a rewrite of the known web.</p>
+    </div>
+
+    <div id="html5" class="step" data-x="800" data-y="3000" data-z="-4500" data-rotate="180" data-scale="1">
+        <p>An unlikely champion arose.</p>
+        <img style="margin-top:50px" src="img/html5_logo_256.png">
+        <p style="font-size:.8em; margin-top:50px">Humanized, simple &lt;code&gt;.</p>
+    </div>
+
+    <div id="tech-titans" class="step" data-x="800" data-y="3000" data-z="-6000" data-rotate="180" data-scale="1">
+        <p>Tech titans embraced this new way.</p>
+        <ul style="margin-top:50px">
+            <li><img style="width:250px; margin-top:15px" src="img/google.png"></li>
+            <li><img style="width:250px; margin-top:15px" src="img/amazon.jpg"></li>
+            <li><img style="width:200px; margin-top:15px" src="img/yahoo.png"></li>
+            <li><img style="width:250px; margin-top:15px" src="img/facebook.jpg"></li>
+        </ul>
+    </div>
+
+    <div id="steve-jobs" class="step" data-x="800" data-y="3000" data-z="-7500" data-rotate="180" data-scale="1">
+        <p>Then Steve Jobs killed flash </p>
+        <span style="font-size:0.6em">(& every other plugin technology)</span>
+        <ul style="margin-top:50px">
+            <li><img style="margin-top:15px; width:300px" src="img/steve-jobs.png"></li>
+        </ul>
+        <p style="font-size:0.5em">by not supporting them on the iOS.</p>
+    </div>
+
+    <div id="microsoft-clueless" class="step" data-x="800" data-y="3000" data-z="-9000" data-rotate="180" data-scale="1">
+        <p><span style="font-size:0.8em">As Apple destroyed flash,</span><br> Microsoft decided to build a competitor, <br>Silverlight.</p>
+        <ul style="margin-top:50px">
+            <li><img style="margin-top:15px; " src="img/silverlight-future.jpg"></li>
+        </ul>
+        <span style="font-size:0.6em">They failed to see the irrelevance of flash & the coming dominance of <br>HTML5.</span>
+    </div>
+
+    <div style="width:1000px" id="msft-bungled" class="step" data-x="800" data-y="3000" data-z="-10500" data-rotate="180" data-scale="1">
+        <p>This was not an isolated event.</p>
+        <p style="margin-top: 40px; font-size:0.8em">In retrospect, Microsoft had a bungled decade.</p>
+        <ul style="margin-top: 50px">
+            <li><img src="img/selfpunished.jpg"></li>
+        </ul>
+    </div>
+
+    <div style="width:1000px" id="encarta-vs-google" class="step" data-x="800" data-y="3000" data-z="-12000" data-rotate="180" data-scale="1">
+        <p><span style="font-size:0.6em">At the beginning of the century,</span><br> <span style="font-size:0.8em">Microsoft launched an online encyclopedia,</span><br> Encarta.</p>
+        <p style="margin-top: 40px; font-size:0.8em">Just as Google turned the internet into THE encyclopedia with</p>
+        <p>Search</p>
+        <ul style="margin-top: 50px">
+            <li><img src="img/googlevsbing.png"></li>
+        </ul>
+        <p style="margin-top: 40px; font-size:0.6em">Then 10 years later, in 2009, Microsoft launches BING.</p>
+        <p style="font-size:0.4em">( The same year they shutdown Encarta. )</p>
+    </div>
+
+
+    <div style="width:1000px" id="microsoft-os-misstep" class="step" data-x="800" data-y="3000" data-z="-13500" data-rotate="180" data-scale="1">
+        <p>In 2002, Apple released OSX Lion.</p>
+        <p style="margin-top: 50px; font-size: 0.8em">In 2005, Microsoft nearly destroys their reputation by aborting a new operating system, Windows Vista, into the world.</p>
+        <ul style="margin-top: 40px">
+            <li><img src="img/os-wars.png"></li>
+        </ul>
+        <p style="margin-top: 40px; font-size:0.6em">5 years later, in 2009, Microsoft tries to undo their mistake by launching Windows 7.</p>
+        <p style="font-size:0.4em">( By which time, Apple had released OSX 0, 1, 2, 3, 4, 5 & 6, Snow Leopard. )</p>
+    </div>
+
+
+    <div style="width:1000px" id="apple-ipod" class="step" data-x="800" data-y="3000" data-z="-15000" data-rotate="180" data-scale="1">
+        <p>In 2001, Apple released their first iPod.</p>
+        <p style="font-size: 0.6em; color:#333">By 2006, Apple had released, iPod 1, 2, 3, 4 & 5, the Mini 1 & 2, The Nano 1 & 2, and the Shuffle 1 & 2</p>
+        <p style="margin-top: 50px; font-size: 0.8em">In 2006, Microsoft comes out with the Zune.</p>
+        <ul style="margin-top: 40px">
+            <li><img src="img/ipodvszune.png"></li>
+        </ul>
+        <p style="margin-top: 40px; font-size:0.6em">5 years later, in 2011, Microsoft discontinues Zune hardware.</p>
+        <p style="font-size:0.4em">(In 2011, Apple was shipping, new versions of everything and had released the iPod Touch 1, 2, 3 & 4 )</p>
+    </div>
+
+
+
+
+    <div style="width:1000px" id="apple-iphone" class="step" data-x="800" data-y="3000" data-z="-16500" data-rotate="180" data-scale="1">
+        <p>In 2007, Apple released the iPhone. <span </p>
+        <p style="font-size: 0.6em; color:#333">By 2010, the iPhone 1, 2, 3 and 4 dominated mobile browsing.<p>
+        <p style="margin-top: 50px; font-size:0.8em">In 2008, Google debuted Android on the HTC Dream.</p>
+        <p style="font-size: 0.5em; color:#333">By 2010, Android v1.0, 1.1, 1.5 Cupcake, 1.6 Donut, 2.0/1 Eclair, 2.2 Froyo, 2.3 Gingerbread.<p>
+        <p style="margin-top:50px; font-size: 0.8em;">In late 2010, Microsoft finally answers with Windows Mobile. </p>
+        <ul style="margin-top: 40px">
+            <li><img src="img/phonewars.png"></li>
+        </ul>
+        <p style="margin-top: 40px; font-size:0.6em">By 2010, iOS & Android dominated the market.</p>
+        <p style="font-size:0.4em">To gain access to a market, Microsoft launches in Europe & partners with Nokia.</p>
+    </div>
+
+
+    <div style="width:1000px" id="apple-ipad" class="step" data-x="800" data-y="3000" data-z="-18000" data-rotate="180" data-scale="1">
+        <p>In 2010, Apple released the iPad tablet. <span </p>
+        <p style="font-size: 0.6em; color:#333">By 2011, iPad 2 had been released w/ iPad 3 imminent in 2012.</p>
+        <p style="font-size: 0.6em; margin-top: 20px;">By 2011, Android tablets began popping up everywhere.</p>
+        <p style="font-size: 0.6em; margin-top: 20px;">2011, RIM debuts blackberry playbook.</p>
+        <p style="font-size: 0.6em; margin-top: 20px;">2011, HP debuts and shuts down WebOS tablet.</p>
+        <p style="font-size: 0.6em; margin-top: 20px;">2011, Amazon launches Kindle iFire Tablet popping up everywhere.</p>
+        <p style="font-size: 0.6em; margin-top: 20px; color: red;">Microsoft has not answered, yet.</p>
+        <ul style="margin-top: 40px">
+            <li><img src="img/tabletwars.png"></li>
+        </ul>
+    </div>
+
+    <div style="width:1000px" id="the-cloud" class="step" data-x="800" data-y="3000" data-z="-19500" data-rotate="180" data-scale="1">
+        <p style="font-size: 1em">2006, Amazon launched their cloud called EC2.</p>
+        <p style="font-size: 0.6em; color:#333">By 2010, much of the web ran on Amazon's cloud like Netflix.</p>
+        <p style="font-size: 1em; margin-top: 20px;">2006, Rackspace cloud launched.<span </p>
+        <p style="font-size: 1em; margin-top: 20px;">2008, Google App Engine launched.</p>
+        <p style="font-size: 1em; margin-top: 20px;">2010, Microsoft Azure launched.</p>
+        <ul style="margin-top: 40px">
+            <li><img src="img/cloudwars.png"></li>
+        </ul>
+    </div>
+
+    <div style="width:1000px" id="microsoft-browser" class="step" data-x="800" data-y="3000" data-z="-21000" data-rotate="180" data-scale="1">
+        <p style="font-size:0.8em">Microsoft begins to lose the browser. <span style="color:#333; font-size: 0.6em">(the OS of the future, IMO)</span></p>
+        <p style="margin-top: 40px; font-size:0.8em">2004 Firefox rises from the ashes of Netscape / Mozilla.</p>
+        <p style="font-size: 0.6em; color:#333">Developer tools, namely firebug, captured the hearts & minds of developers.</p>
+        <p style="margin-top: 40px; font-size:0.8em">2005 Apple opensourced WebKit, the heart of Safari.</p>
+        <p style="margin-top: 40px; font-size:0.8em">2008 Google creates Chrome, the fastest browser on the web.</p>
+        <p style="font-size: 0.6em; color:#333">The javascript engine, V8, was so good, JavaScript became fast, damn fast.</p>
+        <p style="margin-top: 40px; font-size:0.8em">Microsoft released IE7 in 2006 & IE8 in 2008. <span style="color:#333; font-size: 0.6em">Neither were good.</span></p>
+        <p style="font-size: 0.6em; color:#333">In 2010, IE9 is released, a descent browser but far from best of class.</p>
+        <img style="margin-top:15px" src="img/browserwars.png">
+    </div>
+
+    <div style="width:1000px" id="microsoft-java" class="step" data-x="800" data-y="3000" data-z="-22500" data-rotate="180" data-scale="1">
+        <p style="font-size: 0.8em">In 1996, Java launched, a VM technology that ran anywhere.</p>
+        <p style="margin-top: 40px; font-size:0.8em">2002, Microsoft makes .NET/C#, a <span style="color:red">Windows only</span> VM.</p>
+        <p style="font-size: 0.5em; color:#333">IMO C# is the better language, <br>but we have to run on Linux & IBM/AS400, so we use Java</p>
+        <ul style="margin-top: 40px">
+            <li><img src="img/java-vs-net.png"></li>
+        </ul>
+        <p style="margin-top: 30px; font-size:0.6em;">This decade saw a massive proliferation of languages, Ruby/RoR, Python, JVM languages (Scala, Clojure, Groovy ..)</p>
+        <p style="margin-top: 30px; font-size:0.6em;">By 2011, Javascript looked to be the dominant run anywhere runtime.</p>
+    </div>
+
+    <div style="width:1000px" id="microsoft-thedeal" class="step" data-x="800" data-y="3000" data-z="-24000" data-rotate="180" data-scale="1">
+        <p style="font-size: 0.7em">Microsoft plays the "late to the party" come from behind strategy.</p>
+        <p style="margin-top: 40px; font-size:0.8em">That worked in the 1990's, but it failed in 2000-2010+.</p>
+        <p style="font-size: 0.5em; color:#333">Given the speed of innovation, that strategy should fail harder in the next decade.<p>
+        <p style="margin-top: 40px;">Will they change?</p>
+    </div>
+
+    <div style="width:1000px" id="microsoft-change" class="step" data-x="800" data-y="3000" data-z="-25500" data-rotate="180" data-scale="1">
+        <p style="font-size:1.2em">Hope</p>
+        <p style="margin-top: 40px; font-size:0.8em">2008, Microsoft embraces <img alt="JQuery javascript library" style="width:150px" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/9e/JQuery_logo.svg/524px-JQuery_logo.svg.png"> over Microsoft Ajax. </p>
+        <p style="margin-top: 40px; font-size:0.7em">2010, Microsoft creates Metro Design language.<span style="font-size:0.8em"> They do care about design! </span></p>
+        <p style="margin-top: 40px; font-size:0.8em">2011, massive support for Javascript!</p>
+        <p style="font-size: 0.5em; color:#333">Port NodeJS, build a blazingly fast IE10, deemphasize Silverlight/WPF/.NET</p>
+        <p style="font-size: 0.5em; color:#333">Windows 8 native applications to run on WinRT w/ JavaScript APIs!</p>
+        <p style="font-size: 0.5em; color:#333">They oppose Google's Dart language in support of "making javascript better."</p>
+        <p style="margin-top: 40px; font-size:0.8em">They publicly denounce browser plugins<p>
+        <p style="font-size: 0.5em; color:#333">Yeah, Microsoft starts to get behind the "semantic web" and open internet.</p>
+        <p style="margin-top: 40px; font-size:0.8em">They kill IE6. They KILL IE6!<p>
+        <p style="font-size: 0.5em; color:#333">IE6 maybe the single biggest reason web developers hated microsoft.</p>
+    </div>
+
+
+    <div style="width:1000px" id="future-webby" class="step" data-x="800" data-y="3000" data-z="-27000" data-rotate="180" data-scale="1">
+        <p>No one knows the future... but it looks like:</p>
+        <img style="margin-top: 60px;" src="img/html5_logo_256.png">
+        <p style="margin-top:60px; font-size: 0.8em; color:#333">HTML, CSS, Javascript:</p>
+
+    </div>
+
+    <div style="width:1000px" id="microsoft-trex" class="step" data-x="800" data-y="3000" data-z="-28500" data-rotate="180" data-scale="1">
+        <p>The point is.</p>
+        <p style="margin-top: 40px; font-size:0.8em">If you hitch career to something, </p>
+        <p>know what that something is...</p>
+        <img style="margin-top: 40px;" src="img/trex-bones.png">
+    </div>
+
+</div>
+
+<!--
+
+    Hint is not related to impress.js in any way.
+
+    But it can show you how to use impress.js features in creative way.
+
+    When the presentation step is shown (selected) it's element get's the class of "active" and `#impress` root
+    element get's the class based on active step id `step-ID` (where ID is the step id)... It probably is not
+    so clear because of all these IDs in here, so for example when the first step (the one with id of `bored`)
+    is active, `#impress` element get a class of `step-bored`.
+
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation.
+
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+
+
+<!--
+
+    Last, but not least.
+
+    To make all described above really work, you need to include impress.js in the page.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because I was lazy, haven't wrapped the code in any kind of "DOM ready" event, so it will not work
+    if included too early in the source ;)
+
+-->
+<script src="js/impress.js"></script>
+
+</body>
+</html>
+
+<!--
+
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+
+    Oh, you've already cloned the code from GitHub?
+
+    You have it open in text editor?
+
+    Stop right there!
+
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about
+    creating awesome and engaging presentations.
+
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+
+-->
+
+<!--
+
+    Are you still reading this?
+
+    For real?
+
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+
+-->
+
